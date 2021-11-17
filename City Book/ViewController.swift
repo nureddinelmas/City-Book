@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var citymarkNames = [String]()
     var citymarkImages = [UIImage]()
+    var choseCitymarkNames = ""
+    var chosenCityImages = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -31,6 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         citymarkImages.append(UIImage(named: "stockholm")!)
         citymarkImages.append(UIImage(named: "malmö")!)
         citymarkImages.append(UIImage(named: "göteborg")!)
+        
+        navigationItem.title = "City Book"
     }
     
     
@@ -42,6 +47,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
 
         }
+        
+    
             
             }
     
@@ -58,6 +65,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return citymarkNames.count
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == "toImageViewController" {
+            let destinationVC = segue.destination as! ImageViewController
+            destinationVC.selectedCityImage = chosenCityImages
+            destinationVC.selectedCitymarkName = choseCitymarkNames
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        choseCitymarkNames = citymarkNames[indexPath.row]
+        chosenCityImages = citymarkImages[indexPath.row]
+        
+        performSegue(withIdentifier: "toImageViewController", sender: nil)
+        
+    }
+    
+  
+    
+    
     
     
 

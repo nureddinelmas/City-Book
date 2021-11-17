@@ -16,6 +16,7 @@
 		E15A2A042745148D0051C863 /* City_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A2A032745148D0051C863 /* City_BookTests.swift */; };
 		E15A2A0E2745148D0051C863 /* City_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A2A0D2745148D0051C863 /* City_BookUITests.swift */; };
 		E15A2A102745148D0051C863 /* City_BookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A2A0F2745148D0051C863 /* City_BookUITestsLaunchTests.swift */; };
+		E15A2A59274533240051C863 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A2A58274533240051C863 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E15A2A092745148D0051C863 /* City BookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "City BookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15A2A0D2745148D0051C863 /* City_BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_BookUITests.swift; sourceTree = "<group>"; };
 		E15A2A0F2745148D0051C863 /* City_BookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City_BookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E15A2A58274533240051C863 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		E15A29EB2745148B0051C863 /* City Book */ = {
 			isa = PBXGroup;
 			children = (
+				E15A2A58274533240051C863 /* ImageViewController.swift */,
 				E15A29EC2745148B0051C863 /* AppDelegate.swift */,
 				E15A29EE2745148B0051C863 /* SceneDelegate.swift */,
 				E15A29F02745148B0051C863 /* ViewController.swift */,
@@ -260,6 +263,7 @@
 			files = (
 				E15A29F12745148B0051C863 /* ViewController.swift in Sources */,
 				E15A29ED2745148B0051C863 /* AppDelegate.swift in Sources */,
+				E15A2A59274533240051C863 /* ImageViewController.swift in Sources */,
 				E15A29EF2745148B0051C863 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
